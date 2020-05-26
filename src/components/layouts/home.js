@@ -7,8 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import "normalize.css"
+
 import Nav from "../Nav"
-import "./home.css"
 
 const HomeLayout = ({ children }) => {
   return (
