@@ -6,7 +6,8 @@ const theme = {
     powderWhite: "#FFFDF9",
     darkGrey: "#222831",
     darkerGrey: "#15191e",
-    lightGrey: "#393e46",
+    lightGrey: "#2a323c",
+    black: "#0a0d0f",
   },
 }
 
