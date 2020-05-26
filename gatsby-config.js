@@ -3,6 +3,10 @@ module.exports = {
     title: `Anmol Vijayvargiya`,
     description: `Anmol Vijayvargiya's portfolio website`,
     author: `@anmolvj`,
+    firstName: "Anmol",
+    location: "San Francisco Bay Area",
+    introMsg:
+      "I create tools that improve the development experience of other software engineers and love creating complex UI components for web and mobile platforms.",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

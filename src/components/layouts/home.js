@@ -17,13 +17,15 @@ const Wrapper = styled(Container)`
 const HomeLayout = ({ children }) => {
   return (
     <Theme>
-      <Wrapper>
-        <Grid item xs={12}>
-          <Nav />
-        </Grid>
+      <Wrapper maxWidth="false">
+        <Grid container spacing="5">
+          <Grid item xs={12}>
+            <Nav />
+          </Grid>
 
-        <Grid item xs={12}>
-          {children}
+          <Grid item xs={12}>
+            <Container>{children}</Container>
+          </Grid>
         </Grid>
       </Wrapper>
     </Theme>
