@@ -1,22 +1,32 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import "normalize.css"
+import Grid from "@material-ui/core/Grid"
+import { Container } from "@material-ui/core"
+import styled from "styled-components"
 
+import Theme from "../theme"
 import Nav from "../Nav"
+
+const Wrapper = styled(Container)`
+  background-color: ${props => props.theme.colors.darkGrey};
+  min-height: 100vh;
+  padding: 0;
+`
 
 const HomeLayout = ({ children }) => {
   return (
-    <>
-      <Nav />
-      <main>{children}</main>
-    </>
+    <Theme>
+      <Wrapper>
+        <Grid item xs={12}>
+          <Nav />
+        </Grid>
+
+        <Grid item xs={12}>
+          {children}
+        </Grid>
+      </Wrapper>
+    </Theme>
   )
 }
 

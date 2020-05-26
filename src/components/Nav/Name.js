@@ -1,6 +1,13 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import Typography from "@material-ui/core/Typography"
+import styled from "styled-components"
+
+const StyledLink = styled(Link)`
+  color: ${props => props.theme.colors.powderWhite};
+  text-decoration: none;
+`
 
 const Name = () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +20,11 @@ const Name = () => {
     }
   `)
 
-  return <Link to="/">{data.site.siteMetadata.title}</Link>
+  return (
+    <StyledLink to="/">
+      <Typography variant="h6">{data.site.siteMetadata.title}</Typography>
+    </StyledLink>
+  )
 }
 
 Name.propTypes = {
