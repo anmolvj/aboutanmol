@@ -1,6 +1,7 @@
 import React from "react"
 import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
+import Item from "./item"
 
 const DrawerContentGrid = styled(Grid)`
   background-color: ${props => props.theme.colors.black};
@@ -24,7 +25,9 @@ const DrawerItems = () => (
     alignItems="center"
   >
     {drawerItems.map(i => (
-      <Grid item>{i}</Grid>
+      <Grid item>
+        <Item name={i} />
+      </Grid>
     ))}
   </DrawerContentGrid>
 )

@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 import { Container } from "@material-ui/core"
 import styled from "styled-components"
 
-import Theme from "../theme"
+import { StyledComponentsTheme, MuiTheme } from "../theme"
 import Nav from "../Nav"
 
 const Wrapper = styled(Container)`
@@ -15,20 +15,25 @@ const Wrapper = styled(Container)`
 `
 
 const HomeLayout = ({ children }) => {
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
-    <Theme>
-      <Wrapper maxWidth="false">
-        <Grid container spacing="5">
-          <Grid item xs={12}>
-            <Nav />
-          </Grid>
+    <StyledComponentsTheme>
+      <MuiTheme>
+        <Wrapper maxWidth="false">
+          <Grid container spacing="5">
+            <Grid item xs={12}>
+              <Nav />
+            </Grid>
 
-          <Grid item xs={12}>
-            <Container>{children}</Container>
+            <Grid item xs={12}>
+              <Container>{children}</Container>
+            </Grid>
           </Grid>
-        </Grid>
-      </Wrapper>
-    </Theme>
+        </Wrapper>
+      </MuiTheme>
+    </StyledComponentsTheme>
   )
 }
 

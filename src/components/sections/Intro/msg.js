@@ -2,13 +2,16 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Typography from "@material-ui/core/Typography"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
 
 const HiMsg = styled(Typography)`
   color: ${props => props.theme.colors.powderWhite};
 `
 const Msg = styled(Typography)`
   color: ${props => props.theme.colors.offWhite};
+  font-weight: bold;
+`
+const Container = styled.div`
+  max-width: 30vw;
 `
 
 const Message = () => {
@@ -25,23 +28,11 @@ const Message = () => {
   `)
 
   return (
-    <Grid
-      container
-      direction="column"
-      justify="center"
-      alignItems="flex-start"
-      spacing="2"
-    >
-      <Grid item>
-        <HiMsg variant="h3">I'm {data.site.siteMetadata.firstName},</HiMsg>
-      </Grid>
-      <Grid item>
-        <Msg variant="subtitle2">{data.site.siteMetadata.introMsg}</Msg>
-      </Grid>
-      <Grid item>
-        <Msg variant="caption">{data.site.siteMetadata.location}</Msg>
-      </Grid>
-    </Grid>
+    <Container>
+      <HiMsg variant="h2">I'm {data.site.siteMetadata.firstName},</HiMsg>
+      <Msg variant="h5">{data.site.siteMetadata.introMsg}</Msg>
+      <Msg variant="caption">{data.site.siteMetadata.location}</Msg>
+    </Container>
   )
 }
 
