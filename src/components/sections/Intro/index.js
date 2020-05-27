@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 import Msg from "./msg"
 import DevImage from "./dev"
+import Resume from "./resume"
+import GetInTouch from "./get-in-touch"
 
 const ContainerGrid = styled(Grid)``
 const Intro = props => (
@@ -24,7 +26,21 @@ const Intro = props => (
         </Grid>
       </Grid>
     </Grid>
-    <Grid item></Grid>
+    <Grid item>
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+      >
+        <Grid item>
+          <Resume />
+        </Grid>
+        <Grid item>
+          <GetInTouch />
+        </Grid>
+      </Grid>
+    </Grid>
   </ContainerGrid>
 )
 
