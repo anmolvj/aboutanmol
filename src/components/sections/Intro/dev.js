@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
 import Developer from "./../../graphics/dev.svg"
 
 const DevSvg = styled(Developer)`

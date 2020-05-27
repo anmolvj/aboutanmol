@@ -10,6 +10,10 @@ import NavDrawer from "./Drawer/index"
 const StyledAppBar = styled(AppBar)`
   background-color: ${props => props.theme.colors.darkerGrey};
 `
+
+const StyledGridContainer = styled(Grid)`
+  min-width: 100%;
+`
 const Container = ({ children }) => (
   <StyledAppBar position="static">
     <Toolbar>{children}</Toolbar>
@@ -18,14 +22,19 @@ const Container = ({ children }) => (
 
 const Nav = () => (
   <Container>
-    <Grid container direction="row" justify="space-between" alignItems="center">
+    <StyledGridContainer
+      container
+      direction="row"
+      justify="space-between"
+      alignItems="center"
+    >
       <Grid item>
         <Name />
       </Grid>
-      <Grid item>
+      <Grid item xs="1">
         <NavDrawer />
       </Grid>
-    </Grid>
+    </StyledGridContainer>
   </Container>
 )
 

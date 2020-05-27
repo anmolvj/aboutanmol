@@ -1,6 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
 import Button from "../../Button"
 import ContactGraphic from "../../graphics/contact.svg"

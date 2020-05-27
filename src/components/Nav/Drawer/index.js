@@ -2,8 +2,14 @@ import React from "react"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
 import Drawer from "@material-ui/core/Drawer"
+import Paper from "@material-ui/core/Paper"
+import styled from "styled-components"
 
 import Items from "./items"
+
+const StyledPaper = styled(Paper)`
+  background-color: ${props => props.theme.colors.black};
+`
 
 const NavDrawer = () => {
   const [state, setState] = React.useState({
@@ -38,6 +44,7 @@ const NavDrawer = () => {
         anchor={"right"}
         open={state["drawer"]}
         onClose={toggleDrawer("drawer", false)}
+        PaperProps={{ component: StyledPaper }}
       >
         <Items />
       </Drawer>

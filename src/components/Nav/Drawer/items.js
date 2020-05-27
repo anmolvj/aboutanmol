@@ -4,10 +4,10 @@ import styled from "styled-components"
 import Item from "./item"
 
 const DrawerContentGrid = styled(Grid)`
-  background-color: ${props => props.theme.colors.black};
-  height: 100%;
+  min-height: 100vh;
   color: ${props => props.theme.colors.powderWhite};
   min-width: 20vw;
+  padding-top: 50px;
 `
 const drawerItems = [
   "Home",
@@ -23,6 +23,7 @@ const DrawerItems = () => (
     direction="column"
     justify="flex-start"
     alignItems="center"
+    spacing="5"
   >
     {drawerItems.map(i => (
       <Grid item>
