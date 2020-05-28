@@ -1,1 +1,6 @@
 export { default as Intro } from "./Intro"
+export { default as Skills } from "./Skills"
+export { default as Work } from "./Work"
+export { default as Testimonial } from "./Testimonial"
+export { default as Article } from "./Article"
+export { default as Contact } from "./Contact"

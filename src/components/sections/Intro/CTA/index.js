@@ -16,7 +16,7 @@ const StyledResumeImg = styled(ResumeImg)`
 const StyledContactImg = styled(ContactImg)`
   ${imageHeight}
 `
-const CTA_Actions = ({ label, Image }) => (
+const Actions = ({ label, Image }) => (
   <Grid
     container
     direction="column"
@@ -36,10 +36,10 @@ const CTA_Actions = ({ label, Image }) => (
 const CTA = () => (
   <Grid container direction="row" justify="space-evenly" alignItems="center">
     <Grid item>
-      <CTA_Actions label="View Resume" Image={StyledResumeImg} />
+      <Actions label="View Resume" Image={StyledResumeImg} />
     </Grid>
     <Grid item>
-      <CTA_Actions label="Get in Touch" Image={StyledContactImg} />
+      <Actions label="Get in Touch" Image={StyledContactImg} />
     </Grid>
   </Grid>
 )
