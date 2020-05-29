@@ -12,25 +12,16 @@ const StyledButton = styled(MuiButton)`
   }
 `
 
-const Button = ({ label, Graphic }) => (
-  <Grid container direction="column" justify="center" alignItems="center">
-    <Grid item>{Graphic && <Graphic />}</Grid>
-    <Grid item>
-      <StyledButton size="large" variant="contained">
-        {label}
-      </StyledButton>
-    </Grid>
-  </Grid>
-)
+const Button = ({ label, Graphic }) => <MuiButton>{label}</MuiButton>
 
-Button.propTypes = {
-  Graphic: PropTypes.element,
-  label: PropTypes.string,
-}
+// Button.propTypes = {
+//   Graphic: PropTypes.element,
+//   label: PropTypes.string,
+// }
 
-Button.defaultProps = {
-  Graphic: null,
-  label: "",
-}
+// Button.defaultProps = {
+//   Graphic: null,
+//   label: "",
+// }
 
 export default Button

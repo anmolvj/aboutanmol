@@ -3,16 +3,23 @@ import { useStaticQuery, graphql } from "gatsby"
 import Typography from "@material-ui/core/Typography"
 import styled from "styled-components"
 
-const HiMsg = styled(Typography)`
-  color: ${props => props.theme.colors.powderWhite};
+const HiMsg = styled.div`
+  font-weight: bold;
+  font-size: 1.5rem;
 `
-const Msg = styled(Typography)`
+
+const Msg = styled.div`
   color: ${props => props.theme.colors.offWhite};
   font-weight: bold;
+  font-size: 0.75rem;
 `
-const Container = styled.div`
-  max-width: 30vw;
+const Location = styled.div`
+  color: ${props => props.theme.colors.offWhite};
+  font-weight: bold;
+  font-size: 0.5rem;
 `
+
+const HiMsgCom = ({ text }) => <HiMsg variant="h6">I'm {text},</HiMsg>
 
 const Message = () => {
   const data = useStaticQuery(graphql`
@@ -28,11 +35,11 @@ const Message = () => {
   `)
 
   return (
-    <Container>
-      <HiMsg variant="h2">I'm {data.site.siteMetadata.firstName},</HiMsg>
-      <Msg variant="h5">{data.site.siteMetadata.introMsg}</Msg>
-      <Msg variant="caption">{data.site.siteMetadata.location}</Msg>
-    </Container>
+    <>
+      <HiMsgCom text={data.site.siteMetadata.firstName} />
+      <Msg variant="subtitle2">{data.site.siteMetadata.introMsg}</Msg>
+      <Location variant="caption">{data.site.siteMetadata.location}</Location>
+    </>
   )
 }
 

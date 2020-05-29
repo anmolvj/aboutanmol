@@ -3,8 +3,8 @@ import styled from "styled-components"
 import Developer from "./../../graphics/dev.svg"
 
 const DevSvg = styled(Developer)`
-  height: 40vw;
-  width: 40vw;
+  height: 100vw;
+  width: 100vw;
 `
 
 const DevImage = () => <DevSvg />
