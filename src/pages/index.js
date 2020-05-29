@@ -14,12 +14,12 @@ import {
 const IndexPage = () => (
   <HomeLayout>
     <SEO title="Home" />
-    <Intro id="Home" />
-    <Skills id="Skills" />
-    <Work id="Work" />
-    <Testimonial id="Testimonial" />
-    <Article id="Article" />
-    <Contact id="Contact" />
+    <Intro id="home" />
+    <Skills id="skills" />
+    <Work id="work" />
+    <Testimonial id="testimonial" />
+    <Article id="articles" />
+    <Contact id="contact" />
   </HomeLayout>
 )
 
