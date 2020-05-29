@@ -9,10 +9,6 @@ import Items from "./Items"
 import Name from "./Name"
 import { StyledAppBar, StyledToolbar, StyledDrawerPaper } from "./styled"
 
-const StyledContainer = styled.div`
-  display: flex;
-`
-
 const Nav = ({ children }) => {
   const [state, setState] = React.useState({
     isDrawerOpen: false,

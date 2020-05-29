@@ -1,34 +1,45 @@
 import React from "react"
-import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
 
 import Msg from "./msg"
 import DevImage from "./dev"
 import CTA from "./CTA"
 
-const ContainerGrid = styled(Grid)``
+const IntroSectionContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+const MessageAndImageContainer = styled.div`
+  display: flex;
+`
+const MessageContainer = styled.div`
+  border: 1px solid white;
+`
+const DevImageContainer = styled.div`
+  border: 1px solid white;
+`
+const CtaContainer = styled.div`
+  border: 1px solid white;
+`
+
 const Intro = props => (
-  <ContainerGrid
-    container
-    direction="column"
-    justify="center"
-    alignItems="stretch"
-    {...props}
-  >
-    <Grid item>
-      <Grid container direction="row" justify="space-around">
-        <Grid item>
-          <Msg />
-        </Grid>
-        <Grid item>
-          <DevImage />
-        </Grid>
-      </Grid>
-    </Grid>
-    <Grid item>
+  <IntroSectionContainer>
+    <MessageAndImageContainer>
+      <MessageContainer>
+        <Msg />
+      </MessageContainer>
+      <DevImageContainer>
+        <DevImage />
+      </DevImageContainer>
+    </MessageAndImageContainer>
+
+    <CtaContainer>
       <CTA />
-    </Grid>
-  </ContainerGrid>
+    </CtaContainer>
+  </IntroSectionContainer>
 )
 
 export default Intro
