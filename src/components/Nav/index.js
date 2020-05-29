@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
 
 const Nav = ({ children }) => {
   const [state, setState] = React.useState({
-    isDrawerOpen: true,
+    isDrawerOpen: false,
   })
 
   const toggleDrawer = open => event => {
@@ -30,8 +30,8 @@ const Nav = ({ children }) => {
   }
 
   return (
-    <StyledContainer>
-      <StyledAppBar position="fixed">
+    <>
+      <StyledAppBar position="static">
         <StyledToolbar variant="dense">
           <Typography variant="h6" noWrap>
             <Name />
@@ -61,7 +61,7 @@ const Nav = ({ children }) => {
       >
         <Items />
       </Drawer>
-    </StyledContainer>
+    </>
   )
 }
 

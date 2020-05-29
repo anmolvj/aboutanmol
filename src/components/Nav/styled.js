@@ -5,6 +5,8 @@ import styled from "styled-components"
 
 export const StyledAppBar = styled(AppBar)`
   background-color: ${props => props.theme.colors.darkGrey};
+  max-height: 3rem;
+  margin-bottom: 5rem;
 `
 
 export const StyledToolbar = styled(Toolbar)`
