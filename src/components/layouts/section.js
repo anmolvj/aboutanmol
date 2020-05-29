@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   border-bottom: 0.5px solid grey;
   width: 95%;
   margin: auto;
+  padding: 1rem;
 `
 
 const Title = styled.h3`
@@ -16,9 +17,15 @@ const Title = styled.h3`
   text-transform: capitalize;
 `
 
+const Content = styled.div`
+  border: 0.5px solid grey;
+  padding: 1rem;
+`
+
 const Section = ({ title, id, children }) => (
   <Wrapper id={id}>
     <Title>{title}</Title>
+    <Content>{children}</Content>
   </Wrapper>
 )
 
