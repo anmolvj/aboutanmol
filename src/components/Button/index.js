@@ -14,14 +14,4 @@ const StyledButton = styled(MuiButton)`
 
 const Button = ({ label, Graphic }) => <MuiButton>{label}</MuiButton>
 
-// Button.propTypes = {
-//   Graphic: PropTypes.element,
-//   label: PropTypes.string,
-// }
-
-// Button.defaultProps = {
-//   Graphic: null,
-//   label: "",
-// }
-
 export default Button

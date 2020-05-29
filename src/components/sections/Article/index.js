@@ -1,26 +1,12 @@
 import React from "react"
-import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
-import SectionTitle from "../common/title"
-import ArticleImg from "../../graphics/article.svg"
-
-const StyledArticleImg = styled(ArticleImg)`
-  height: 10rem;
-`
-
-const ContainerGrid = styled(Grid)``
+import SectionLayout from "../../layouts/section"
+import { sectionIds } from "../../config"
 
 const Article = props => (
-  <ContainerGrid
-    container
-    direction="column"
-    justify="center"
-    alignItems="stretch"
-    {...props}
-  >
-    <SectionTitle title="Artiles" />
-    <StyledArticleImg />
-  </ContainerGrid>
+  <SectionLayout title={sectionIds.ARTICLE} id={sectionIds.ARTICLE}>
+    just a child
+  </SectionLayout>
 )
 
 export default Article
